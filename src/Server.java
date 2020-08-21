@@ -10,26 +10,7 @@ public class Server {
         ServerSocket serverSocket = new ServerSocket(8000);
 
         while (true) {
-        Socket socket = serverSocket.accept();//создание сервера и сокетов
 
-        OutputStream outputStream = socket.getOutputStream();
-        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-        BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);//создание выхода
-
-        InputStream inputStream = socket.getInputStream();
-        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);//создание входа
-
-        String string = bufferedReader.readLine();
-
-        System.out.println(hashMap.get(string));
-
-        bufferedWriter.write("50");
-        bufferedWriter.newLine();
-        bufferedWriter.flush();
-        bufferedWriter.close();
-        bufferedReader.close();
-        socket.close();
         }
     }
 }
