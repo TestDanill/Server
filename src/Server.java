@@ -5,13 +5,6 @@ import java.util.HashMap;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        HashMap<String, Integer> hashMap = new HashMap<>();
-        hashMap.put("Москва", 50);
-        ServerSocket serverSocket = new ServerSocket(8000);
-
-        while (true) {
-
-        }
     }
 }
 
